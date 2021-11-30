@@ -19,7 +19,7 @@ function playRound(playerSelection, computerSelection) {
     let win = false;
     switch (playerSelection) {
         case computerSelection:
-            return "Draw"
+            return score;
         
         case "rock":
             if (computerSelection == "scissors") {
@@ -41,9 +41,9 @@ function playRound(playerSelection, computerSelection) {
     }
 
     if (win) {
-        return `You win! ${capitalize(playerSelection)} beats ${capitalize(computerSelection)}`;
+        return [score[0] + 1, score[1]];
     } else {
-        return `You lose! ${capitalize(computerSelection)} beats ${capitalize(playerSelection)}`;
+        return [score[0], score[1] + 1];
     }
 }
 
@@ -51,15 +51,26 @@ function capitalize(string) {
     return string[0].toUpperCase() + string.substring(1).toLowerCase();
 }
 
-function game(rounds) {
-    for (let i = 0; i < rounds; i++) {
-        let selection
-        do {
-            selection = prompt("Rock. Paper. Scissors. Shoot!").toLowerCase();
+function game(event) {
+    let selection = event.target.innerText.toLowerCase();
+    if (selection == "rock" | selection == "paper" | selection == "scissors") {
+        newScore = playRound(selection, computerPlay());
+        score[0] = newScore[0];
+        score[1] = newScore[1];
+        display.textContent = `Player: ${score[0]} Computer: ${score[1]}`;
+        if (score[0] == 5) {
+            display.textContent = `You Win! ${display.textContent}`;
+        } else if (score[1] == 5) {
+            display.textContent = `You Lose! ${display.textContent}`;
         }
-        while (selection != "rock" & selection != "paper" & selection != "scissors");
-        console.log(playRound(selection, computerPlay()));
     }
 }
 
-game(3);
+const score = [0, 0]; // player score, computer score
+const display = document.querySelector('#display');
+const buttons = document.querySelectorAll('button');
+console.log(buttons);
+buttons.forEach(button => button.addEventListener('click', game));
+//const rockButton = document.getElementById('rock');
+//rockButton.addEventListener('click', playTurn);
+

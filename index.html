@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="display">Hello</div>
-    <div class="btn-container">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+    <div class="main-container">
+        <div class="display-container">
+            <div class="display">
+                <div class="message">Hello</div>
+                <div class="scoreboard"></div>
+            </div>
+        </div>
+        <div class="action-container rock-container"><button id="rock">Rock</button></div>
+        <div class="action-container paper-container"><button id="paper">Paper</button></div>
+        <div class="action-container scissors-container"><button id="scissors">Scissors</button></div>
     </div>
 </body>
 </html>

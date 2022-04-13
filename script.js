@@ -67,7 +67,7 @@ function game(event) {
 }
 
 const score = [0, 0]; // player score, computer score
-const display = document.querySelector('#display');
+const display = document.querySelector('.scoreboard');
 const buttons = document.querySelectorAll('button');
 console.log(buttons);
 buttons.forEach(button => button.addEventListener('click', game));

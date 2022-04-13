@@ -1,0 +1,66 @@
+.main-container {
+    display: grid;
+    grid-template: repeat(5, 20%) / repeat(3, 33%);
+    height: 100vh;
+}
+
+.display-container {
+    grid-area: 1 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #cecece;
+}
+
+.display {
+    border: 5px grey solid;
+    border-bottom: 10px black solid;
+    background-color: white;
+    height: 250px;
+}
+
+.action-container {
+    padding: 0 36px;
+}
+
+.rock-container {
+    grid-row: 1 / 6;
+    display: grid;
+    grid-template-rows: repeat(5, 20%);
+    background-color: #3c3b6e;
+}
+
+.paper-container {
+    grid-area: 3 / 2 / 6 / 3;
+    display: grid;
+    grid-template-rows: repeat(3, 33.33%);
+    background-color: #cecece;
+}
+
+.scissors-container {
+    grid-row: 1 / 6;
+    display: grid;
+    grid-template-rows: repeat(5, 20%);
+    background-color: #b42033;
+}
+
+button {
+    font-size: 36px;
+    border: 5px grey solid;
+    border-radius: 12px;
+    height: 150px;
+}
+
+#rock {
+    grid-row: 4;
+    border-color: blue;
+}
+
+#paper {
+    grid-row: 2;
+}
+
+#scissors {
+    grid-row: 4;
+    border-color: red;
+}

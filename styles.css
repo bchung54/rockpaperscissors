@@ -1,6 +1,7 @@
 @font-face {font-family: "SmoothMarker"; src: url('./smooth-marker-font/SmoothMarker-45d6.ttf');}
 @font-face {font-family: "WhiteboardRegular"; src: url('./WhiteboardRegular-O7gp.ttf');}
 @font-face {font-family: "WhiteboardMarker"; src: url('./DryWhiteboardMarker-Regular.ttf');}
+
 .main-container {
     display: grid;
     grid-template: repeat(5, 20%) / repeat(3, 33%);

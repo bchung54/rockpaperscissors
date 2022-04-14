@@ -1,3 +1,6 @@
+@font-face {font-family: "SmoothMarker"; src: url('./smooth-marker-font/SmoothMarker-45d6.ttf');}
+@font-face {font-family: "WhiteboardRegular"; src: url('./WhiteboardRegular-O7gp.ttf');}
+@font-face {font-family: "WhiteboardMarker"; src: url('./DryWhiteboardMarker-Regular.ttf');}
 .main-container {
     display: grid;
     grid-template: repeat(5, 20%) / repeat(3, 33%);
@@ -13,10 +16,20 @@
 }
 
 .display {
+    font-family: WhiteboardMarker;
+    font-size: 50px;
     border: 5px grey solid;
     border-bottom: 10px black solid;
     background-color: white;
-    height: 250px;
+    height: 350px;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    align-content: center;
+}
+
+.display > *{
+    padding: 50px 0;
 }
 
 .action-container {
@@ -44,11 +57,21 @@
     background-color: #b42033;
 }
 
-button {
+.action-btn {
     font-size: 36px;
     border: 5px grey solid;
     border-radius: 12px;
     height: 150px;
+    box-shadow: -2px 8px rgb(30, 30, 30);
+}
+
+.action-btn:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+.action-btn:active {
+    box-shadow: -2px 2px rgb(30, 30, 30);
+    transform: translateY(6px);
 }
 
 #rock {
@@ -63,4 +86,18 @@ button {
 #scissors {
     grid-row: 4;
     border-color: red;
+}
+
+.reset-btn {
+    font-family: 'Material Icons';
+    font-size: 36px;
+}
+
+.grey {
+    color: white;
+    background-color: grey;
+}
+
+.grey:hover {
+    background-color: grey;
 }

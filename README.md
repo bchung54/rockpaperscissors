@@ -3,6 +3,8 @@ Simple game of rock paper scissors. One round. First to five wins.
 
 [Live Preview](https://bchung54.github.io/rockpaperscissors/)
 
+![Rochambeau screenshot](./rps-screenshot.png)
+
 # Journey Through the TOP: My Web Dev Journey [(The Odin Project)](https://theodinproject.com/)
 
 [Project #1: Recipes](https://github.com/bchung54/odin-recipes) [HTML]
